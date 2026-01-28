@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <rect width="1200" height="800" fill="#e8f4fc"/>
+  <rect width="1200" height="60" fill="#2b7ec9"/>
+  <text x="600" y="35" font-size="24" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">Dashboard Preview</text>
+  
+  <rect x="20" y="80" width="180" height="680" fill="#f0f8fd" stroke="#d5e8f5" stroke-width="1"/>
+  
+  <rect x="220" y="80" width="960" height="680" fill="white" stroke="#d5e8f5" stroke-width="1"/>
+  
+  <rect x="240" y="100" width="920" height="60" fill="#e8f4fc" stroke="#d5e8f5" stroke-width="1"/>
+  <text x="600" y="135" font-size="16" text-anchor="middle" fill="#2b7ec9" font-family="Arial">Gestión de Flota</text>
+  
+  <rect x="240" y="180" width="280" height="140" fill="#f0f8fd" stroke="#d5e8f5" stroke-width="1"/>
+  <text x="380" y="255" font-size="12" text-anchor="middle" fill="#666" font-family="Arial">Contratos</text>
+  
+  <rect x="540" y="180" width="280" height="140" fill="#f0f8fd" stroke="#d5e8f5" stroke-width="1"/>
+  <text x="680" y="255" font-size="12" text-anchor="middle" fill="#666" font-family="Arial">Vehículos</text>
+  
+  <rect x="840" y="180" width="320" height="140" fill="#f0f8fd" stroke="#d5e8f5" stroke-width="1"/>
+  <text x="1000" y="255" font-size="12" text-anchor="middle" fill="#666" font-family="Arial">Clientes</text>
+  
+  <rect x="240" y="340" width="920" height="200" fill="#f0f8fd" stroke="#d5e8f5" stroke-width="1"/>
+  <text x="600" y="445" font-size="14" text-anchor="middle" fill="#2b7ec9" font-family="Arial">Datos y Análisis</text>
+  
+  <rect x="240" y="560" width="920" height="180" fill="white" stroke="#d5e8f5" stroke-width="1"/>
+  <text x="600" y="650" font-size="12" text-anchor="middle" fill="#666" font-family="Arial">Tabla de Reservas</text>
+</svg>
