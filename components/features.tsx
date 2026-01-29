@@ -76,32 +76,33 @@ const features = [
       "Genera contratos, facturas, informes y documentos personalizados automáticamente con plantillas configurables.",
     icon: FileText,
   },
-]
-
-{/* ARRAY PARA LAS 2 CARDS DE ABAJO */}
-const featuresBottom: typeof features = [
   {
     title: "Integración con Verifactu",
     description:
       "Conecta directamente con Verifactu para la emisión automática de facturas electrónicas.",
     icon: ShieldCheck,
+    variant: 'orange',
   },
   {
     title: "Integración con SES Hospedajes",
     description:
       "Integración completa con SES Hospedajes para la gestión de alojamientos y sincronización de datos.",
     icon: Building,
+    variant: 'orange',
   },
+]
+
+const featuresBottom: typeof features = [ 
 ]
 
 export function Features() {
   return (
-    <section id="caracteristicas" className="py-24">
+    <section id="caracteristicas" className="py-24 bg-slate-50">
       <div className="mx-auto max-w-7xl px-6">
         
         {/* TITULO Y SUBTÍTULOS DE LA SECCIÓN DE CARACTERÍSTICAS */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold">
+          <h2 className="text-3xl font-bold text-black">
             Todo lo que necesitas para gestionar tu negocio
           </h2>
           <p className="mt-4 text-muted-foreground">
@@ -113,15 +114,16 @@ export function Features() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
           {features.map((feature, index) => {
             const Icon = feature.icon
+            const isOrange = feature.variant === 'orange'
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="transition-shadow">
                 <CardHeader>
                   <div className="flex items-start gap-3">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Icon className="text-primary" size={20} />
+                    <div className={isOrange ? 'p-2 bg-[rgba(255,107,53,0.1)] rounded-lg' : 'p-2 bg-[rgba(43,126,201,0.1)] rounded-lg'}>
+                      <Icon className={isOrange ? 'text-[rgb(255,107,53)]' : 'text-[rgb(43,126,201)]'} size={20} />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl text-black">{feature.title}</CardTitle>
                     </div>
                   </div>
                 </CardHeader>
@@ -137,14 +139,14 @@ export function Features() {
           {featuresBottom.map((feature, index) => {
             const Icon = feature.icon
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="transition-shadow">
                 <CardHeader>
                   <div className="flex items-start gap-3">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Icon className="text-primary" size={20} />
+                    <div className="p-2 bg-[rgba(43,126,201,0.1)] rounded-lg">
+                      <Icon className="text-[rgb(43,126,201)]" size={20} />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl text-black">{feature.title}</CardTitle>
                     </div>
                   </div>
                 </CardHeader>

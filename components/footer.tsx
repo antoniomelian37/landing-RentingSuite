@@ -1,73 +1,55 @@
+import Link from "next/link"
+import Logo from "@/components/ui/logo"
 import { Mail, MapPin, Phone } from "lucide-react"
+
 export function Footer() {
   return (
-    <footer className="border-t bg-card">
+    <footer className="border-t bg-card text-black">
       <div className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
 
           {/* COLUMNA D EINFO */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">RentingSuite</h3>
-            <p className="text-muted-foreground text-sm">
+          <div className="md:w-1/3">
+            <h3 className="font-bold text-lg mb-4 text-primary flex items-center gap-2">
+              <Logo className="h-10 w-10" />
+              RentingSuite
+            </h3>
+            <p className="text-black text-sm">
               La solución completa para gestionar tu empresa de alquiler de vehículos.
             </p>
           </div>
 
-          {/* COLUMNA DE ENLACES */}
-          <div>
-            <h4 className="font-semibold mb-4">Producto</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#caracteristicas" className="text-muted-foreground hover:text-primary">
-                  Características
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary">
-                  Pricing
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* COLUMNA DE CONTACTO */}
-          <div>
-            <h4 className="font-semibold mb-4">Contacto</h4>
+          <div id="contacto" className="md:w-1/3">
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Mail size={16} />
-                <a href="mailto:info@jccd.es" className="hover:text-primary">
-                  info@jccd.es
+              <li className="flex items-center gap-2 text-black">
+                <Mail size={16} className="text-primary" />
+                <a href="mailto:info@rentingsuite.com" className="text-sky-900 font-semibold hover:underline">
+                  info@rentingsuite.com
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <MapPin size={16} />
-                <span>PONER AQUI UBICACIÓN, Las Palmas</span>
-              </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone size={16} />
-                <span>TELEFONO DE CONTACT</span>
+              <li className="flex items-center gap-2 text-black">
+                <MapPin size={16} className="text-primary" />
+                <span>Agaete, Gran Canaria</span>
               </li>
             </ul>
           </div>
         </div>
-
-        {/* Separador */}
         <div className="border-t"></div>
 
-        {/* Copyright y Links Legales */}
-        <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} RentingSuite. Todos los derechos reservados.</p>
+        {/* LEGAL */}
+        <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-black">
+          <p>© {new Date().getFullYear()} RentingSuite.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary">
+            <Link href="/privacidad" className="hover:underline">
               Privacidad
-            </a>
-            <a href="#" className="hover:text-primary">
+            </Link>
+            <Link href="/terminos" className="hover:underline">
               Términos
-            </a>
-            <a href="#" className="hover:text-primary">
+            </Link>
+            <Link href="/cookies" className="hover:underline">
               Cookies
-            </a>
+            </Link>
           </div>
         </div>
       </div>

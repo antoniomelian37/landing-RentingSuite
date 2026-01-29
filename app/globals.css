@@ -13,9 +13,8 @@
   --card: #ffffff;
   --card-foreground: #000000;
   --border: #d5e8f5;
-}
 
-@theme inline {
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -39,7 +38,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--primary);
+  color: var(--foreground);
   font-weight: 600;
 }
 
@@ -48,9 +47,10 @@ p, span, a, li {
 }
 
 a {
-  color: var(--primary);
+  color: inherit;
+  cursor: pointer;
 }
 
 a:hover {
   text-decoration: underline;
-}
+} 

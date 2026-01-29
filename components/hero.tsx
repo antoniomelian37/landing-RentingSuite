@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button"
 {/* INSERTAR EL HERO */}
 export function Hero() {
 return (
-<section className="border-b">
+<section className="bg-slate-100">
 <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-24 md:grid-cols-2">
 
 {/* TITULO Y SUBTITULOS DEL HERO */}
 <div className="flex flex-col justify-center gap-6">
-<h1 className="text-4xl font-bold leading-tight tracking-tight md:text-5xl">
+<h1 className="text-4xl font-bold leading-tight tracking-tight md:text-5xl text-black">
 La solución completa para gestionar tu empresa de alquiler de vehículos.
 </h1>
 
@@ -19,13 +19,17 @@ RentingSuite es un SaaS integral que te permite gestionar flota, contratos, fact
 
 {/* BOTON PARA DEMO EN EL HERO */}
 <div className="flex items-center gap-4">
-<Button size="lg">
-Solicitar demo
+<Button size="lg" className="bg-[rgb(43,126,201)] text-white hover:opacity-90">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 stroke-current" fill="none" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <path d="M8 2v4" />
+    <path d="M16 2v4" />
+    <rect width="18" height="18" x="3" y="4" rx="2" />
+    <path d="M3 10h18" />
+    <path d="m9 16 2 2 4-4" />
+  </svg>
+  Solicitar demo
 </Button>
 </div>
-<p className="text-sm text-muted-foreground">
-¿Quieres saber más? Contáctanos en <a href="mailto:info@jccd.es" className="text-primary hover:underline">info@jccd.es</a>
-</p>
 </div>
 
 {/* IMAGEN DEL DASHBOARD AQUI*/}
